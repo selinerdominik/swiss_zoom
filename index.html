@@ -171,6 +171,19 @@
     		kanton = null;
             g.selectAll("#bezirke").remove();
     	}
+        if (!kanton) {
+                d3.select("#title").text("Wählen Sie einen Kanton");
+                        d3.select("#value").text("Klicken Sie, um auf eine tiefere Ebene zu gelangen");
+            }
+            else if (!bezirk)
+            {
+                d3.select("#title").text("Wählen Sie einen Bezirk");
+                d3.select("#value").text("Klicken sie auf die weisse Fläche, um auf eine höhere Ebene zu gelangen");
+            }
+            else {
+                d3.select("#title").text("");
+               d3.select("#value").text("Klicken sie auf die weisse Fläche, um auf eine höhere Ebene zu gelangen"); 
+            }
     }
     
     function zoom(xyz) {
