@@ -34,6 +34,7 @@
         
 </div>
     <div id="map"></div>
+      <div style="font-size:10px; font-style:sans-serif">Quelle: «Bundesamt für Statistik (BFS), GEOSTAT» <a href="http://www.bfs.admin.ch/bfs/portal/de/index/dienstleistungen/geostat/datenbeschreibung/generalisierte_gemeindegrenzen.html" target="_blank">Generalisierte Gemeindegrenzen</a> 2014
     <script src="js/d3.v3.min.js"></script>
     <script src="js/topojson.v1.min.js"></script>
     <script>
@@ -171,6 +172,7 @@
     		kanton = null;
             g.selectAll("#bezirke").remove();
     	}
+        
         if (!kanton) {
                 d3.select("#title").text("Wählen Sie einen Kanton");
                         d3.select("#value").text("Klicken Sie, um auf eine tiefere Ebene zu gelangen");
